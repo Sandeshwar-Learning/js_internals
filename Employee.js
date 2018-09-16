@@ -6,6 +6,8 @@ function Employee(id, name, salary) {
     this.id = id;
     this.name = name;
     this.salary = salary;
+
+    // each object will have a copy of this function
     this.print = () => {
         console.log(`(${this.id}) Name: ${this.name}, Salary: ${this.salary}`)
     }
@@ -15,9 +17,14 @@ function Employee(id, name, salary) {
         Employee.totalEmployees = 0;
     }
     Employee.totalEmployees++;    
+}
 
-    // base member (will be stored in the functions prototype object)
-    Employee.prototype.baseHra = 5000;
+// base member (will be stored in the functions prototype object)
+Employee.prototype.baseHra = 5000;
+
+// to create a shared function across all the objects
+Employee.prototype.show = function() {
+    console.log(`(${this.id}) Name: ${this.name}, Salary: ${this.salary}`)
 }
 
 let vinod = new Employee(1, "Vinod Gounder", 21000);
