@@ -6,11 +6,8 @@ function Employee(id, name, salary) {
     this.id = id;
     this.name = name;
     this.salary = salary;
-<<<<<<< HEAD
 
     // each object will have a copy of this function
-=======
->>>>>>> 805efbc80bd71cd149d3d27c311f8c0ecbc8cdb4
     this.print = () => {
         console.log(`(${this.id}) Name: ${this.name}, Salary: ${this.salary}`)
     }
@@ -20,7 +17,6 @@ function Employee(id, name, salary) {
         Employee.totalEmployees = 0;
     }
     Employee.totalEmployees++;    
-<<<<<<< HEAD
 }
 
 // base member (will be stored in the functions prototype object)
@@ -29,11 +25,6 @@ Employee.prototype.baseHra = 5000;
 // to create a shared function across all the objects
 Employee.prototype.show = function() {
     console.log(`(${this.id}) Name: ${this.name}, Salary: ${this.salary}`)
-=======
-
-    // base member (will be stored in the functions prototype object)
-    Employee.prototype.baseHra = 5000;
->>>>>>> 805efbc80bd71cd149d3d27c311f8c0ecbc8cdb4
 }
 
 let vinod = new Employee(1, "Vinod Gounder", 21000);
